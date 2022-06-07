@@ -1,4 +1,4 @@
-# Working Tigers Roster api <a href="https://git.heroku.com/tigers-api-100devs.git" target="_blank">View Here</a>
+# Working Tigers Roster api <a href="https://tigersapi.herokuapp.com/" target="_blank">View Here</a>
 Detroit Tiger's API
 
 
