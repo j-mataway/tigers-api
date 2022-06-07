@@ -1,3 +1,5 @@
+const dotenv = require('dotenv')
+dotenv.config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
@@ -7,9 +9,10 @@ const { request, response } = require('express')
 const PORT = 8000
 
 
-MongoClient.connect(process.env.DATABASE_URL, {useUnifiedTopology:true})
+MongoClient.connect(process.env.DATABASE_URL, {useUnifiedTopology:true}) 
     .then(client => {
         console.log('Connected to DB')
+        console.log(process.env.DATABASE_URL)
         const db = client.db('players-stats')
         const playerCollection = db.collection('players')
 
