@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detroit Tigers</title>
+</head>
+<body>
+    <h1>Select a player to see stats</h1>
+    <select name="" id="playerList">
+        <% for(let i = 0; i < players.length; i++) {%>
+            <option value="name" id="<%= players[i].name.split(' ').join('') %>"><%= players[i].name %></option>
+        <% } %>
+    </select> 
+    <div id="display">
+        <h2 id="playerName"></h2>
+        <h2 id="playerAge"></h2>
+        <h2 id="playerPosition"></h2>
+    </div>
+    <p>https://git.heroku.com/tigers-api-100devs.git/api for full team list</p>
+    <p>https://git.heroku.com/tigers-api-100devs.git/api/(player name) for individual player</p>
+    <p>https://git.heroku.com/tigers-api-100devs.git/addplayers to add players to the database</p>
+    <script src="/main.js"></script>
+</body>
+</html>
