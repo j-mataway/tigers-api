@@ -9,7 +9,7 @@ const { request, response } = require('express')
 const PORT = 8000
 
 
-MongoClient.connect(process.env.DATABASE_URL, {useUnifiedTopology:true}) 
+MongoClient.connect(process.env.DATABASE_URL, {}) 
     .then(client => {
         console.log('Connected to DB')
         const db = client.db('players-stats')
